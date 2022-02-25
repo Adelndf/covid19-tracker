@@ -1,0 +1,24 @@
+.map {
+  margin: 1.5rem 0;
+  height: 485px;
+  width: 100%;
+  background: var(--secondary-clr);
+  border-radius: 10px;
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.3);
+  padding: 0.7rem;
+}
+.map .leaflet-container {
+  border-radius: 7px;
+  height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .map {
+    height: 380px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .map {
+    height: 250px;
+  }
+}

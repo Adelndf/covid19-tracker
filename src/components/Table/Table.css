@@ -1,0 +1,84 @@
+.table {
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem 0;
+  background: var(--secondary-clr);
+  border-radius: 5px;
+  color: #fff;
+  height: 400px;
+  overflow-y: scroll;
+}
+.table__title {
+  font-size: 1.2rem;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.table__title::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(240, 37, 37);
+  left: 0;
+  top: 0;
+  animation: live 1s infinite alternate ease-in-out;
+}
+
+.table__item {
+  display: flex;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.table__item:nth-of-type(odd) {
+  background: var(--secondary-clr-alt);
+}
+
+/* width */
+.table::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+.table::-webkit-scrollbar-track {
+  background: #3c4f8f;
+  border-radius: 10px;
+}
+
+/* Handle */
+.table::-webkit-scrollbar-thumb {
+  background: #5f77c4;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.table::-webkit-scrollbar-thumb:hover {
+  background: #7a91dd;
+}
+
+.table__country {
+  flex: 2;
+  color: var(--lightGray-clr);
+}
+.table__cases {
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
+  color: var(--lightGray-clr);
+}
+
+.table__item:hover .table__cases,
+.table__item:hover .table__country {
+  color: #fff;
+}
+
+@keyframes live {
+  to {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+}
